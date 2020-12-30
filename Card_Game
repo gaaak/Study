@@ -1,0 +1,9 @@
+n, m = map(int, input().split()) # n * m 의 형태로 놓여있는 카드
+result = 0
+
+for i in range(n) :
+    card = list(map(int, input().split()))
+    min_card = min(card) # 가장 작은 수 찾기
+    result = max(result, min_card) # 작은 수 중 큰 수 찾기
+
+print(result)
