@@ -1,0 +1,14 @@
+place = input()
+row = int(place[1])
+col = int(ord(place[0])) - int(ord('a')) + 1
+count = 0
+move = [(-2, -1), (-2, 1), (2, -1), (2, 1), (1, 2), (-1, 2), (1, -2), (-1, -2)]
+
+for i in move :
+    after_row = row + i[0]
+    after_col = col + i[1]
+
+    if after_row >= 1 and after_row <= 8 and after_col >= 1 and after_col <= 8 :
+        count += 1
+
+print(count)
