@@ -1,0 +1,12 @@
+#학생 수 n 입력 받기
+n = int(input())
+#학생 이름, 성적 입력 받기
+array = []
+for i in range(n) :
+    data = input().split()
+    array.append((data[0], int(data[1])))
+#점수를 기준으로 정렬
+array = sorted(array, key=lambda student:student[1])
+
+for i in array :
+    print(i[0], end=' ')
