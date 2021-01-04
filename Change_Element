@@ -1,0 +1,17 @@
+#n, k 구분으로 입력
+n, k = map(int, input().split())
+#a의 원소들이 공백으로 입력
+a = list(map(int, input().split()))
+#b의 원소들이 공백으로 입력
+b = list(map(int, input().split()))
+
+a.sort()
+b.sort(reverse=True)
+
+for i in range(k) :
+    if a[i] < b[i] :
+        a[i], b[i] = b[i], a[i]
+    else:
+        break
+
+print(sum(a))
